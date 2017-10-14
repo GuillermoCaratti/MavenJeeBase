@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+<f:view>
+    <h:form>
+        <h1>Usuarios</h1>
+ 		<h:link outcome="createUser" value="Nuevo Usuario" />
+ 		<ul>
+	 		<ui:repeat value="#{userMb.all()}" var="user">
+	            <li>
+	            	#{user.lname}, #{user.name} [#{user.age}]
+	            </li>
+	        </ui:repeat>
+ 		</ul>
+        
+    </h:form>
+</f:view>
+</h:body>
+</html>
